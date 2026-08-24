@@ -1,17 +1,48 @@
-# quiz_app
+# Quiz App
 
-A new Flutter project.
+An interactive Flutter quiz about Flutter fundamentals. The app presents a
+series of multiple-choice questions with shuffled answers, tracks the user's
+selections, and displays a final result screen showing the score and a detailed
+answer summary. The quiz can then be restarted without relaunching the app.
 
-## Getting Started
+The project demonstrates Flutter concepts such as stateful and stateless
+widgets, screen changes driven by state, callbacks, custom data models, list
+mapping, local image assets, Google Fonts, and scrollable content.
 
-This project is a starting point for a Flutter application.
+## Project Structure
 
-A few resources to get you started if this is your first Flutter project:
+```text
+lib/
+├── main.dart
+├── quiz.dart
+├── start_screen.dart
+├── questions_screen.dart
+├── results_screen.dart
+├── answer_button.dart
+├── data/
+│   └── questions.dart
+├── models/
+│   └── quiz_question.dart
+└── questions_summary/
+    ├── questions_summary.dart
+    ├── summary_item.dart
+    └── question_identifier.dart
+assets/
+└── images/
+    └── quiz-logo.png
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## How to Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Make sure [Flutter](https://docs.flutter.dev/get-started/install) is installed.
+2. From the project directory, install the dependencies:
+
+   ```bash
+   flutter pub get
+   ```
+
+3. Run the app:
+
+   ```bash
+   flutter run
+   ```
