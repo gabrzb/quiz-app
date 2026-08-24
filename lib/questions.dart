@@ -17,22 +17,27 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     
     return SizedBox(
       width: double.infinity,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            currentQuestion.question,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
+      child: Container(
+        margin: const EdgeInsets.all(40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              currentQuestion.question,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+              ),
+              textAlign: TextAlign.center,
             ),
-          ),
-          SizedBox(height: 30),
-          ...currentQuestion.answers.map((answer) => AnswerButton(
-            answerText: answer,
-            onTap: () {},
-          )),
-        ]
+            SizedBox(height: 30),
+            ...currentQuestion.getShuffleAnswers().map((answer) => AnswerButton(
+              answerText: answer,
+              onTap: () {},
+            )),
+          ]
+        ),
       )
     );
   }
